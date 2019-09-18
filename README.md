@@ -4,7 +4,7 @@
 
 <p align="center"><h3 align="center">Privacy and security focused knowledgebase and tasks management</h3>
 </p>
-
+<br>
 <p align="center">
   <a href="https://getbalsa.com">
     <img alt="Balsa" title="Balsa" src="https://user-images.githubusercontent.com/1191477/65186383-90dd7600-da37-11e9-97cd-fc70b068c87a.png">
