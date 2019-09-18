@@ -1,13 +1,14 @@
 <h1 align="center"> Balsa </h1> <br>
 <p align="center">
+  Privacy and security focused knowledgebase and tasks management
+</p>
+
+<p align="center">
   <a href="https://getbalsa.com">
     <img alt="Balsa" title="Balsa" src="https://user-images.githubusercontent.com/1191477/65186383-90dd7600-da37-11e9-97cd-fc70b068c87a.png">
   </a>
 </p>
 
-<p align="center">
-  Privacy and security focused knowledgebase and tasks management
-</p>
 
 ## Table of Contents
 
