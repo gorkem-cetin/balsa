@@ -1,4 +1,4 @@
-<center><img alt="Balsa logo" title="Balsa" align="center" src="https://user-images.githubusercontent.com/1191477/65186945-c6cf2a00-da38-11e9-9e26-a6380278228a.png"></center>
+<center><img alt="Balsa logo" title="Balsa" align="middle" src="https://user-images.githubusercontent.com/1191477/65186945-c6cf2a00-da38-11e9-9e26-a6380278228a.png"></center>
 
 <p align="center"><h3 align="center">Privacy and security focused knowledgebase and tasks management</h3>
 </p>
