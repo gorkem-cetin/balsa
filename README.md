@@ -1,5 +1,5 @@
-<h1 align="center"> Balsa </h1> <br>
-<p align="center"><h3>Privacy and security focused knowledgebase and tasks management</h3>
+<h1 align="center"> Balsa </h1>
+<p align="center"><h3 align="center">Privacy and security focused knowledgebase and tasks management</h3>
 </p>
 
 <p align="center">
