@@ -1,7 +1,7 @@
 <h1 align="center"> Balsa </h1> <br>
 <p align="center">
   <a href="https://getbalsa.com">
-    <img alt="Balsa" title="Balsa" src="https://user-images.githubusercontent.com/1191477/65186087-e402f900-da36-11e9-8181-31b4c794f62c.png">
+    <img alt="Balsa" title="Balsa" src="https://user-images.githubusercontent.com/1191477/65186254-48be5380-da37-11e9-88b4-7b374520428d.png">
   </a>
 </p>
 
