@@ -11,8 +11,8 @@
   </a>
 </p>
 
-[![Gitter](https://badges.gitter.im/getbalsa/community.svg)](https://gitter.im/getbalsa/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
+[![Gitter](https://badges.gitter.im/getbalsa/community.svg)](https://gitter.im/getbalsa/community)
+[![License](https://img.shields.io/badge/License-AGPLv3-f39f37)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 
 ## Table of Contents
 
