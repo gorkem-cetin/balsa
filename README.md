@@ -10,9 +10,13 @@
     <img alt="Balsa" title="Balsa" src="https://user-images.githubusercontent.com/1191477/65186383-90dd7600-da37-11e9-97cd-fc70b068c87a.png">
   </a>
 </p>
-
+<p align="center">
+  
 [![Gitter](https://badges.gitter.im/getbalsa/community.svg)](https://gitter.im/getbalsa/community)
 [![License](https://img.shields.io/badge/License-AGPLv3-f39f37)](https://www.gnu.org/licenses/agpl-3.0.en.html)
+[![Version](https://img.shields.io/badge/Version-1.1-ff69b4)]()
+
+</p>
 
 ## Table of Contents
 
