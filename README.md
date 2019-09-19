@@ -43,15 +43,11 @@ We realize you need a modern, fast, plugin based knowledge management platform t
 
 * **Knowledgebase & documents:** Balsa has a company-wide knowledgebase that you can store and share your most important documents within the company, without sharing it with 3rd parties, using highest security standards.
 
-* **Tasks & projects**
-From simple listviews to tasks, Balsa provides you the simplest yet thought out solution your project teams across the company can use.
+* **Tasks & projects:** From simple listviews to tasks, Balsa provides you the simplest yet thought out solution your project teams across the company can use.
 
-* **Tables (and soon spreadsheets)**
-Keeping a list of your todo items, organizing your client list or just maintain your HR resources is a breeze with Balsa. Just start with a blank page, add collaborators and go.
+* **Tables (and soon spreadsheets):** Keeping a list of your todo items, organizing your client list or just maintain your HR resources is a breeze with Balsa. Just start with a blank page, add collaborators and go.
 
-* **(Manage your team)**
-
-Balsa has 2-level user management role system where you can define admins or users, each having different permissions. 
+* **Team management:** Balsa has 2-level user management role system where you can define admins or users, each having different permissions. 
 
 ## Installation
 
