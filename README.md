@@ -61,7 +61,7 @@ We realize you need a modern, fast, plugin based knowledge management platform t
 
 ## Installation
 
-Balsa installer assumes it is running on a vanilla Ubuntu/CentOS/RHEL Linux without any services listening on port 80 or 443 (which should also be open to incoming traffic). Once run, it takes care of every configuration and doesn't require any additional, manual intervention.
+Balsa installer assumes it is running on a vanilla Ubuntu/CentOS/RHEL without any services listening on port 80 or 443 (which should also be open to incoming traffic). Once run, it takes care of every configuration and doesn't require any additional, manual intervention.
 
 To deploy Balsa, download the latest release and run: ```sudo ./install.sh```.  
 
@@ -80,7 +80,7 @@ What we would like to add on top of Balsa are as follows:
 
 ## Credits
 
-Balsa is written using modern stacks, including [Vue](https://nodejs.org/) (with Element Vue UI framework), [Nodejs](https://nodejs.org/), [Apollo GraphQL](https://github.com/apollographql) and [Postgresql](https://www.postgresql.org/). We chose those stacks and very happy with our decision so far. Our editor is [Tiptap](https://tiptap.scrumpy.io), a Vue wrapper on top of [Prosemirror](https://prosemirror.net).
+Balsa is written using modern stacks, including [Vue](https://nodejs.org/) (with Element Vue UI framework), [Nodejs](https://nodejs.org/), [Apollo GraphQL](https://github.com/apollographql) and [Postgresql](https://www.postgresql.org/). Our editor is [Tiptap](https://tiptap.scrumpy.io), a Vue wrapper on top of [Prosemirror](https://prosemirror.net).
 
 
 ## Security
