@@ -16,6 +16,10 @@
 [![License](https://img.shields.io/badge/License-AGPLv3-f39f37)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 [![Version](https://img.shields.io/badge/Version-1.1-ff69b4)]()
 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/contains-technical-debt.svg)](https://forthebadge.com)
+
 </p>
 
 ## Table of Contents
