@@ -1,5 +1,6 @@
 <p align="center">
 <img alt="Balsa logo" title="Balsa" align="middle" src="https://user-images.githubusercontent.com/1191477/65187181-49f08000-da39-11e9-9362-d6f1656fb725.png">
+[![Gitter](https://badges.gitter.im/getbalsa/community.svg)](https://gitter.im/getbalsa/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 </p>
 
 <p align="center"><h3 align="center">Privacy and security focused knowledgebase and tasks management</h3>
