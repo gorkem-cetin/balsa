@@ -57,6 +57,7 @@ We realize you need a modern, fast, plugin based knowledge management platform t
 * :busts_in_silhouette: **Team management:** Balsa has 2-level user management role system where you can define admins or users, each having different permissions. 
 * :zap: Keep track of changes in the activity stream
 * :speech_balloon: Discuss with your team using comments
+* :mag: Search in documents and preview all results in a simple manner
 
 
 ## Installation
