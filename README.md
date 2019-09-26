@@ -1,5 +1,5 @@
 <p align="center">
-<img alt="Balsa logo" title="Balsa" align="middle" src="https://user-images.githubusercontent.com/1191477/65648300-b33f3880-dfcf-11e9-9b76-760eae2a9d06.png">
+<img alt="Balsa logo" title="Balsa" align="middle" src="https://user-images.githubusercontent.com/1191477/65187181-49f08000-da39-11e9-9362-d6f1656fb725.png">
 </p>
 
 <p align="center"><h3 align="center">Privacy and security focused knowledgebase and tasks management</h3>
@@ -7,7 +7,7 @@
 <br>
 <p align="center">
   <a href="https://getbalsa.com">
-    <img alt="Balsa" title="Balsa" src="https://user-images.githubusercontent.com/1191477/65186383-90dd7600-da37-11e9-97cd-fc70b068c87a.png">
+    <img alt="Balsa" title="Balsa" src="https://user-images.githubusercontent.com/1191477/65648300-b33f3880-dfcf-11e9-9b76-760eae2a9d06.png">
   </a>
 </p>
 <p align="center">
