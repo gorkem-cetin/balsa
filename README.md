@@ -1,5 +1,5 @@
 <p align="center">
-<img alt="Balsa logo" title="Balsa" align="middle" src="https://user-images.githubusercontent.com/1191477/65648253-82f79a00-dfcf-11e9-8423-6511cf2ce1d0.png">
+<img alt="Balsa logo" title="Balsa" align="middle" src="https://user-images.githubusercontent.com/1191477/65648300-b33f3880-dfcf-11e9-9b76-760eae2a9d06.png">
 </p>
 
 <p align="center"><h3 align="center">Privacy and security focused knowledgebase and tasks management</h3>
