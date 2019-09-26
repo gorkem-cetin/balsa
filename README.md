@@ -29,6 +29,7 @@
 - [Installation](#installation)
 - [Roadmap](#roadmap)
 - [Credits](#credits)
+- [Watch video](#video)
 - [Security](#security)
 - [Feedback](#feedback)
 - [License](#license)
@@ -83,6 +84,11 @@ What we would like to add on top of Balsa are as follows:
 
 Balsa is written using modern stacks, including [Vue](https://nodejs.org/) (with Element Vue UI framework), [Nodejs](https://nodejs.org/), [Apollo GraphQL](https://github.com/apollographql) and [Postgresql](https://www.postgresql.org/). Our editor is [Tiptap](https://tiptap.scrumpy.io), a Vue wrapper on top of [Prosemirror](https://prosemirror.net).
 
+## Video 
+
+<p align="center">
+<img alt="Balsa" title="Balsa" src="https://user-images.githubusercontent.com/1191477/65649881-5eeb8700-dfd6-11e9-9fbb-835ba5624410.gif">
+</p>
 
 ## Security
 
