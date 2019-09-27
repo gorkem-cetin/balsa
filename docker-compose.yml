@@ -1,0 +1,52 @@
+version: '3'
+
+volumes:
+  pgdata:
+
+services:
+  db:
+    image: postgres:alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=balsa
+      - POSTGRES_PASSWORD=balsa
+    ports:
+      - 5666:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./.docker/db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+  balsa:
+    build:
+      context: .
+    environment:
+      - NODE_ENV=production
+      - SERVER_PORT=3000
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=100
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USERNAME=balsa
+      - DB_PASSWORD=balsa
+      - DB_DATABASE_NAME=balsa
+    container_name: balsa
+    command: bash -c "yarn && yarn docker-compose-up"
+    ports:
+      - 3000:3000
+      - 3001:3001
+    volumes:
+      - .:/code:cached
+    depends_on:
+      - db
+
+  nginx:
+    image: nginx:alpine
+    restart: always
+    volumes:
+      - ./.docker/nginx.conf:/etc/nginx/conf.d/default.conf
+      - .:/code
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - balsa

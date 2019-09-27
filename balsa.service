@@ -1,0 +1,9 @@
+[Unit]
+Description=balsa-supervisor
+Documentation=balsa
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Restart=on-failure

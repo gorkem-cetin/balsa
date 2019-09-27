@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS balsa_test;
+CREATE DATABASE balsa_test;

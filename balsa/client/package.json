@@ -1,0 +1,65 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "NODE_ENV=production npx --max_old_space_size=4096 vue-cli-service build",
+    "start": "NODE_ENV=production npx --max_old_space_size=4096 vue-cli-service build",
+    "docker-compose-up": "NODE_ENV=production npx --max_old_space_size=4096 vue-cli-service build",
+    "lint": "eslint src --ext .js --fix",
+    "apollo:introspect": "apollo-codegen introspect-schema http://localhost:3000/graphql --output schema.json",
+    "apollo:generate": "apollo-codegen generate **/*.vue --schema schema.json --target typescript --output graphql-types.ts"
+  },
+  "dependencies": {
+    "@shopify/draggable": "latest",
+    "dom-to-image": "latest",
+    "vue-html-to-paper": "latest",
+    "apollo-cache-inmemory": "^1.5.1",
+    "apollo-client": "^2.5.1",
+    "apollo-codegen": "^0.20.2",
+    "apollo-link": "^1.2.11",
+    "apollo-link-debounce": "^2.1.0",
+    "apollo-link-http": "^1.5.14",
+    "apollo-upload-client": "^11.0.0",
+    "core-js": "^2.6.5",
+    "crel": "^4.0.1",
+    "element-ui": "^2.8.2",
+    "fuse.js": "^3.4.5",
+    "graphql": "^14.3.0",
+    "graphql-tag": "^2.10.1",
+    "highlight.js": "^9.15.9",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "tippy.js": "^4.3.4",
+    "tiptap": "^1.23.2",
+    "tiptap-extensions": "^1.23.2",
+    "vue": "^2.6.10",
+    "vue-apollo": "^3.0.0-beta.29",
+    "vue-clipboard2": "^0.3.0",
+    "vue-router": "3.0.7",
+    "vuex": "^3.1.1",
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "dart-sass": "^1.20.1",
+    "html2canvas": "^1.0.0-rc.3",
+    "jspdf": "^1.5.3",
+    "sass-loader": "^7.0.3",
+    "simple-progress-webpack-plugin": "^1.1.2",
+    "turndown": "^5.0.3",
+    "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.21",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-svgstore-plugin": "^4.1.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

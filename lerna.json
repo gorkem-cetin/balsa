@@ -1,0 +1,6 @@
+{
+  "packages": ["balsa/*"],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

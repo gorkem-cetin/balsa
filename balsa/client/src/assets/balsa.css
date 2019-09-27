@@ -1,0 +1,312 @@
+h1 {
+  font-size: 30px;
+  margin: 0;
+  color: #323f50;
+}
+h3 {
+  font-size: 18px;
+  margin: 0;
+
+  color: #323f50;
+}
+h4 {
+  font-size: 16px;
+
+  color: #323f50;
+}
+.circle {
+  border-radius: 50%;
+}
+.arrow {
+  color: #323f50;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.medium-font-weight {
+  font-weight: 400;
+}
+.bold-font-weight {
+  font-weight: 600;
+}
+.el-switch__label.is-active {
+  color: #323f50;
+}
+.balsa-no-border-select .el-select .el-input--suffix input {
+  border: 0;
+  text-align: right;
+}
+.balsa-text-icon:hover {
+  color: #323f50;
+  background-color: #f9fafa;
+  border-radius: 4px;
+}
+.balsa-text-icon {
+  color: #323f50;
+
+  padding: 10px;
+}
+.dots-x {
+  width: 36px;
+  height: 24px;
+  color: #f9fafa;
+}
+.el-switch__label--right {
+  font-size: 15px;
+  margin-left: 8px;
+  color: #9ca2aa;
+}
+.balsa-menu-switch .el-switch__label--right {
+  line-height: 1.1;
+}
+.font-heavy {
+}
+.font-medium {
+}
+/* .el-switch__label.is-active {
+  color: #323f50;
+} */
+
+.el-table th {
+  font-weight: 500;
+  color: #abb1b8;
+
+  padding: 4px 0;
+}
+.balsa-opacity {
+  opacity: 0.73;
+}
+p {
+  margin: 0;
+}
+.el-autocomplete-suggestion__wrap {
+  max-height: 350px;
+}
+.balsa-medium {
+}
+.semi-medium-font {
+  font-size: 13px;
+}
+.extra-small {
+  font-size: 12px;
+}
+.el-radio__label {
+  color: #9ca2aa;
+}
+.el-radio__input.is-checked + .el-radio__label {
+  color: #323f50;
+}
+.medium-font {
+  font-size: 14px;
+}
+.el-tabs__item {
+}
+.config label {
+  font-size: 13px;
+}
+.el-autocomplete input {
+  font-weight: 600;
+}
+.el-input__inner {
+  color: #323f50;
+  /* opacity: 0.6; */
+  font-size: 15px;
+}
+.el-message .el-icon-success {
+  font-size: 20px;
+}
+.el-message .el-icon-error {
+  font-size: 20px;
+}
+.el-message__closeBtn {
+  font-size: 20px;
+}
+.el-dialog__header {
+  background-color: #f8f8f9;
+}
+.span-dark {
+  color: #323f50;
+}
+
+.el-dialog-balsa {
+  width: 100%;
+  max-width: 524px;
+  cursor: auto;
+}
+
+.balsa-tab .el-tabs__header {
+  margin-bottom: 0px;
+}
+.balsa-tab {
+  position: relative;
+}
+.balsa-tab .el-tabs__nav-wrap::after {
+  height: 1px;
+}
+.balsa-tab .el-tabs__nav {
+  margin-left: 10px;
+}
+.balsa-tab-filter {
+  position: absolute;
+  right: 0;
+  top: 23px;
+}
+.balsa-h1-row {
+  font-size: 30px;
+  margin-bottom: 31px;
+  font-weight: 600;
+  color: #323f50;
+}
+.sub-main {
+  min-height: calc(100vh - 60px);
+}
+.balsa-space-between-row {
+  margin-top: 56px;
+  padding-left: 8px;
+}
+@media only screen and (max-width: 600px) {
+  .balsa-no-border-select .el-select .el-input--suffix input {
+    padding-right: 32px;
+  }
+  .mobile-margin-bottom-32 {
+    margin-bottom: 32px;
+  }
+  .mobile-max-width {
+    max-width: 335px;
+  }
+  .balsa-tab-filter {
+    position: absolute;
+    right: -1.4%;
+    top: -40px;
+  }
+  .balsa-space-between-row {
+    flex-wrap: wrap;
+  }
+  .balsa-h1-row:first-child {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+}
+.el-button span {
+  font-size: 13px;
+  font-weight: 700;
+}
+.logo-balsa-svg {
+  width: 65px;
+  height: 24px;
+  color: #323f50;
+}
+.filled .el-input__inner {
+  font-size: 12px;
+  background-color: #f1f2f4;
+  border: 0;
+}
+.small-dialog {
+  max-width: 440px;
+}
+.big-dialog {
+  max-width: 881px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.editor__content-balsa-preview pre {
+  font-size: 8px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 5px;
+}
+.editor__content-balsa-preview p {
+  font-size: 8px;
+  color: #293543;
+  letter-spacing: -0.2px;
+}
+.editor__content-balsa-preview .mention {
+  padding: 0.05rem 0.2rem;
+  font-size: 8px;
+}
+.editor__content-balsa-preview img {
+  width: 70px;
+}
+.editor__content-balsa-preview .todo-checkbox {
+  width: 0.4em;
+  height: 0.4em;
+  border: 1px solid;
+  border-radius: 0;
+  margin-right: 4px;
+  margin-top: 0;
+}
+.editor__content-balsa-preview h1 {
+  font-size: 16px;
+  color: #293543;
+  letter-spacing: -0.2px;
+}
+.editor__content-balsa-preview h2 {
+  font-size: 12px;
+  color: #293543;
+  letter-spacing: -0.2px;
+}
+.editor__content-balsa-preview ul {
+  padding-inline-start: 16px;
+  margin: 2% 0;
+  color: #293543;
+}
+.full-width {
+  width: 100%;
+}
+
+.invite-button span {
+  font-size: 15px;
+  font-weight: 600;
+}
+.balsa-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 960px;
+}
+.balsa-header-bg {
+  background-color: #f8f9fa;
+}
+.actorName {
+  color: rgb(112, 129, 148);
+}
+.el-button + .el-button {
+  margin-left: 0;
+}
+.el-button--mini span {
+  font-size: 11px;
+}
+.el-timeline-item {
+  padding-bottom: 40px;
+}
+.el-card__body {
+  padding: 30px 20px;
+}
+
+.el-timeline-item__node--large {
+  top: 26%;
+}
+.el-timeline .el-timeline-item:last-child .el-timeline-item__tail {
+  display: unset;
+}
+
+.create-folder-dialog {
+  max-width: 500px;
+  width: 98%;
+}
+.overflow-unset .el-tabs__content {
+  overflow: unset;
+}
+.onDragParent {
+  transform: scale(1.005);
+  z-index: 2;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  /* border: 1px solid #ebeef5; */
+  background-color: white;
+}
+.el-select-dropdown__item {
+  height: 46px;
+  line-height: 46px;
+}

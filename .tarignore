@@ -1,0 +1,15 @@
+.git
+.github
+node_modules
+balsa/server/node_modules
+balsa/client/node_modules
+balsa/client/dist
+*.tar.gz
+.env
+balsa/server/uploads
+balsa/var
+yarn-error.log
+yarn.lock
+.idea
+.vscode
+.DS_Store

@@ -1,0 +1,262 @@
+.dark {
+  color: rgb(172, 174, 175);
+}
+.dark .balsa-text-icon {
+  color: rgb(172, 174, 175);
+}
+.dark .balsa-text-icon:hover {
+  background-color: rgb(62, 67, 71);
+  color: rgba(255, 255, 255, 0.9);
+}
+.dark ul {
+  background-color: rgb(55, 60, 63);
+}
+.dark .el-popover {
+  background-color: rgb(55, 60, 63);
+  border: 0;
+}
+.dark .el-switch__label.is-active {
+  color: #007aff;
+}
+.dark .main-capsule {
+  background-color: rgb(47, 52, 55);
+}
+.dark .el-menu {
+  border: 0;
+}
+.dark .el-popper {
+  border: 0;
+}
+.dark .balsa-h1-row {
+  color: rgb(172, 174, 175);
+}
+.dark label {
+  color: rgb(172, 174, 175);
+}
+.dark .small-text-color {
+  color: rgb(172, 174, 175);
+}
+.dark .el-tabs__item {
+  color: rgb(172, 174, 175);
+}
+.dark .span-balsa {
+  color: rgb(172, 174, 175) !important;
+}
+.dark .title {
+  color: rgb(172, 174, 175) !important;
+}
+.dark h1 {
+  color: rgb(172, 174, 175);
+}
+.dark h2 {
+  color: rgb(172, 174, 175);
+}
+.dark h3 {
+  color: rgb(172, 174, 175);
+}
+.dark table {
+  background-color: transparent;
+  width: 100%;
+}
+.dark .el-card {
+  background-color: rgb(55, 60, 63);
+  border: 0;
+}
+.dark .big-span {
+  color: rgb(172, 174, 175);
+}
+.dark h4 {
+  color: rgb(172, 174, 175);
+}
+.dark li {
+  color: rgb(172, 174, 175);
+}
+.dark td {
+  background-color: transparent;
+  border-bottom: 1px solid rgb(172, 174, 175);
+}
+.dark .is-leaf {
+  border-bottom: 1px solid rgb(172, 174, 175) !important;
+}
+.dark .el-table::before {
+  background-color: rgb(172, 174, 175);
+}
+.dark th {
+  background-color: transparent;
+}
+.dark tr {
+  background-color: transparent;
+}
+.dark .el-table {
+  background-color: transparent;
+}
+.dark .el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: transparent;
+}
+.dark .system-capsule {
+  color: rgb(172, 174, 175);
+}
+.dark .is-hover-shadow:hover {
+  box-shadow: 6px 9px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.dark .hover {
+  background-color: transparent;
+}
+.dark .popper__arrow {
+  display: none;
+}
+.dark .el-tabs__nav-wrap::after {
+  background-color: transparent;
+}
+.dark .info-tab {
+  color: rgb(172, 174, 175);
+}
+.dark .dots-x {
+  color: rgb(47, 52, 55);
+  width: 36px;
+  height: 24px;
+}
+.dark .balsa-recently-row:hover {
+  background: transparent;
+}
+.dark .el-menu-item:hover {
+  background-color: rgb(62, 67, 71);
+  color: rgba(255, 255, 255, 0.9);
+}
+.dark .el-menu-item:focus {
+  background-color: rgb(62, 67, 71);
+  color: rgba(255, 255, 255, 0.9);
+}
+.dark .el-select-dropdown__item:hover {
+  background-color: rgb(62, 67, 71);
+  color: rgba(255, 255, 255, 0.9);
+}
+.dark .balsa-divider {
+  background-color: rgb(117, 118, 119);
+}
+.dark .logo-balsa-svg {
+  color: white;
+  width: 65px;
+  height: 24px;
+}
+.dark .icon-balsa-arrow {
+  color: white !important;
+}
+.dark .header-menu-balsa {
+  background-color: rgb(55, 60, 63) !important;
+}
+.dark .el-image__inner {
+  border: 1.5px solid rgb(55, 60, 63);
+}
+.dark .el-select input {
+  background: transparent;
+}
+.dark .arrow {
+  color: rgb(172, 174, 175);
+}
+.dark .system-sub-container {
+  background-color: rgb(55, 60, 63) !important;
+}
+.dark .health-capsule {
+  border: 1px solid rgb(172, 174, 175);
+}
+.dark .color-hevy {
+  color: rgb(172, 174, 175) !important;
+}
+.dark .el-menu--horizontal > .el-menu-item.is-active {
+  color: rgb(172, 174, 175);
+}
+.dark .span-dark {
+  color: rgb(172, 174, 175);
+}
+.dark .editor-capsule-informer {
+  background-color: rgb(47, 52, 55);
+}
+.dark .balsa-home-card {
+  background-color: rgb(55, 60, 63);
+}
+.dark .el-input__inner {
+  opacity: 0.9;
+  color: rgb(172, 174, 175);
+  background-color: rgba(33, 36, 38, 0.45);
+  border: transparent;
+}
+.dark .el-menu-item-text {
+  color: rgb(172, 174, 175);
+}
+.dark .el-menu--horizontal .el-menu-item:not(.is-disabled):hover,
+.dark .el-menu--horizontal .el-menu-item:not(.is-disabled):focus {
+  background-color: transparent;
+  color: rgb(195, 199, 202);
+}
+.dark .trans {
+  background-color: transparent;
+}
+.dark p {
+  color: rgb(172, 174, 175) !important;
+}
+.dark code {
+  color: rgb(172, 174, 175) !important;
+}
+.dark .el-dialog__header {
+  background-color: rgb(55, 60, 63);
+  border-bottom: 1px solid rgb(172, 174, 175);
+}
+.dark .el-dialog__title {
+  color: rgb(172, 174, 175);
+}
+.dark .el-dialog__body {
+  background-color: rgb(55, 60, 63);
+}
+.dark .el-dialog__body span {
+  color: rgb(172, 174, 175);
+}
+.dark .el-dialog__footer {
+  background-color: rgb(55, 60, 63);
+}
+.dark .cancel-balsa {
+  color: white;
+}
+
+.dark .el-breadcrumb__inner,
+.dark .el-breadcrumb__item:last-child .el-breadcrumb__inner {
+  color: rgb(172, 174, 175);
+}
+.dark .balsa-home-card-content-container {
+  background-color: #373d3f;
+  border: 1px solid #5b60632e;
+  border-radius: 4px;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.dark .actorName {
+  color: rgb(172, 174, 175);
+}
+.dark .el-autocomplete-suggestion {
+  background-color: #373d3f;
+}
+.dark .el-autocomplete-suggestion li:hover {
+  background-color: #33383a;
+}
+.dark .search-divider {
+  background-color: #373d3f;
+}
+.dark table {
+  border-collapse: collapse;
+}
+
+.dark th,
+td {
+  border: 1px solid rgb(172, 174, 175);
+}
+.dark .el-timeline {
+  background-color: transparent;
+}
+.dark .file--permission--dialog {
+  background-color: rgba(33, 36, 38, 0.45);
+  border-radius: 4px;
+}
+.dark .el-cascader-node:not(.is-disabled):hover {
+  background: rgb(62, 67, 71);
+}

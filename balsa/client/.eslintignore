@@ -1,0 +1,4 @@
+**/node_modules/
+*.vue
+*.html
+public/

@@ -1,0 +1,27 @@
+name: 'Run SSH Command and wait for 200 response'
+on:
+  push:
+    branches:
+    - ci
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Update Server Repo
+      uses: maddox/actions/ssh@master
+      env:
+        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        HOST: ${{ secrets.BALSA_HOST }}
+        USER: ${{ secrets.BALSA_USER }}
+      with:
+        args: cd balsa && bash deploy.sh
+    - name: Sleep for 10 seconds while site goes down.
+      uses: maddox/actions/sleep@master
+      with:
+        args: 10
+    - name: Check for 200
+      uses: maddox/actions/wait-for-200@master
+      env:
+        URL: ${{ secrets.URL }}
+        SECONDS_BETWEEN_CHECKS: 5
+        MAX_TRIES: 20
