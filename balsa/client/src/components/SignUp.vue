@@ -172,6 +172,24 @@ export default {
       });
     },
   },
+  apollo: {
+    configurations: {
+      query: gql`
+        query configurations {
+          configurations {
+            id
+            appInitialized
+          }
+        }
+      `,
+      result({ data }) {
+        const configurations = data.configurations;
+        if (configurations.appInitialized) {
+          this.$router.push({ name: 'login' });
+        }
+      }
+    }
+  }
 };
 </script>
 

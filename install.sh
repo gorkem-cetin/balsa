@@ -45,5 +45,3 @@ sudo apt -y install supervisor
 (cat $DIR/balsa.service ; echo "ExecStart=/usr/bin/supervisord --nodaemon --configuration $DIR/supervisord.conf") > /etc/systemd/system/balsa.service
 sudo systemctl enable balsa
 sudo systemctl start balsa
-
-yarn create-root-user

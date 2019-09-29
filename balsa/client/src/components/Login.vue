@@ -31,7 +31,7 @@
                     </el-form-item>
                     <el-row type="flex" align="middle" justify="space-between">
                       <router-link to="forgot-password" class="small-span">Forgot Password?</router-link>
-                      <div>
+                      <div v-if="!this.$apollo.queries.configurations.loading && !this.configurations.appInitialized">
                         <span
                             class="small-span small-text-color"
                             style="margin-right:5px;"
@@ -86,7 +86,7 @@
             {
               min: 6,
               max: 100,
-              message: 'Length should be 6 to 255',
+              message: 'Length should be 6 to 100',
               trigger: 'blur',
             },
           ],
@@ -97,6 +97,18 @@
       const token = localStorage.getItem('TOKEN');
       if (token) {
         this.$router.push({name: 'home'});
+      }
+    },
+    apollo: {
+      configurations: {
+        query: gql`
+          query configurations {
+            configurations {
+              id
+              appInitialized
+            }
+          }
+        `,
       }
     },
     methods: {

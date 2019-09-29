@@ -1,7 +1,7 @@
 import Mailer from '../mail/base';
 import {UserConfigurations} from "../entities/userConfigurations";
 import {BehaviourLogger, logExistCheck} from "../logging/core";
-import {MENTIONED_ME, MODIFIED_MY_DOCUMENT, PUBLISHED_DOCUMENT, REPLIED_ME, SHARED_WITH_ME} from "../constants";
+import {MENTIONED_ME, MODIFIED_MY_DOCUMENT, PUBLISHED_DOCUMENT, REPLIED_ME, SHARED_WITH_ME, SMTP_DEFAULT_FROM_EMAIL} from "../constants";
 import {BehaviourLog} from "../entities/behaviourLog";
 import {scheduleJob} from 'node-schedule';
 import {EmailNotifications} from "../entities/emailNotifications";
@@ -9,16 +9,6 @@ import {CronJob} from "../entities/cronJob";
 
 const logger = new BehaviourLogger();
 
-/*
-  Notification gönderme çağırılır
-  User configi kontrol edilir, config okeyse notify işlemi başlar,
-  interval kontrolü yapılır, eğer user intervalden önce notfication aldıysa (son 6 saatte) mail gönderim anından 6 saat sonrası için notification schedule methodu çağırlır.
-  bu method bir schedule var mı diye kontrol eder eğer yoksa o zaman açar.
-  interval kontrolünden false dönerse email doğrudan gönderilir.
-
-  gönderilen emailler gönderildi diye işaretlenir.
-  schedule edilen job açılınca on_queue olur. bitince finished, çalışırken started olur.
- */
 
 class EmailNotifier {
   async notify(sender, receiver, type, to, subject, template, data) {
@@ -27,10 +17,8 @@ class EmailNotifier {
     const interval = config.getInterval(type);
     if (config.checkConfig(type)) {
       if (interval) {
-        // exist check
         const exist = await this.notificationExistCheck(receiver, type, interval);
         if (exist) {
-          // ileriye dönük notification yarat
           this.createNotification(sender, receiver, type, to, subject, template, data, false).then(async (obj) => {
             const scheduleCheck = await this.checkSchedule(receiver);
             if (!scheduleCheck) {
@@ -39,12 +27,10 @@ class EmailNotifier {
             }
           })
         } else {
-          // direkt gönder
           this.createNotification(sender, receiver, type, to, subject, template, data, true);
           this.sendNotification(type, to, subject, template, data);
         }
       } else {
-        // direkt gönder
         this.createNotification(sender, receiver, type, to, subject, template, data, true);
         this.sendNotification(type, to, subject, template, data);
       }
@@ -52,7 +38,6 @@ class EmailNotifier {
 
   }
   async notificationExistCheck(user, type, interval) {
-    // gonderilmiş mesaj kontrolü
     const now = new Date();
     const lookupDate = new Date(now.getTime() - interval * 1000);
 
@@ -102,7 +87,6 @@ class EmailNotifier {
       .andWhere('receiver.id = :userId', { userId: receiver.id })
       .getMany();
 
-    // tüm notificationların bi arada olduğu bir mail gönder hepsini tek tek değil
     const context = {notifications: []};
     for (const notification of notifications) {
       const data = JSON.parse(notification.data);
@@ -181,7 +165,7 @@ module.exports = {
 
     return parseInt(score);
   },
-  highlighter: resultItem =>  {
+  highlighter: resultItem => {
     resultItem.matches.forEach((matchItem) => {
       const text = resultItem.item[matchItem.key];
       const result = [];
@@ -244,7 +228,7 @@ module.exports = {
 
       if (!existCheck) {
         const mailer = new Mailer();
-        const from = 'noreply@describe.im';
+        const from = SMTP_DEFAULT_FROM_EMAIL;
         mailer.sendMail(from, to, subject, template, data);
         logger.log(user, file, action, false, true);
       }

@@ -1,64 +1,67 @@
 import fs from 'fs';
 import path from 'path';
 import morgan from 'morgan';
-import {BehaviourLog} from "../entities/behaviourLog";
+import { BehaviourLog } from '../entities/behaviourLog';
 
 const ACCESS_LOG_PATH = path.join(__dirname, '../../var/log/server/access.log');
 const LOG_INTERVAL = 60 * 30;
 // log to console
-const dev = morgan('dev', {
-  skip(req, res) {
-    return res.statusCode < 400;
-  },
-});
+// const dev = morgan('dev', {
+//   skip(req, res) {
+//     return res.statusCode < 400;
+//   },
+// });
 
 // log all requests to access.log
-const common = morgan('common', {
-  stream: fs.createWriteStream(ACCESS_LOG_PATH, { flags: 'a' }),
-});
+// const common = morgan('common', {
+//   stream: fs.createWriteStream(ACCESS_LOG_PATH, { flags: 'a' }),
+// });
 
 const logExistCheck = async (user, entity, action, interval) => {
-
   const now = new Date();
   const lookupDate = new Date(now.getTime() - interval * 1000);
 
   const qb = BehaviourLog.getRepository().createQueryBuilder('log');
   // const log = await BehaviourLog.findOne({ user, objectType, action, file: entity });
 
-  let log = await qb.leftJoin('log.actor', 'actor')
+  let log = await qb
+    .leftJoin('log.actor', 'actor')
     .leftJoin('log.file', 'file')
     .leftJoin('log.user', 'user')
     .where('log.action = :action', { action })
-    .andWhere("log.createdAt > :lookupDate", { lookupDate: lookupDate.toISOString() })
+    .andWhere('log.createdAt > :lookupDate', { lookupDate: lookupDate.toISOString() })
     .andWhere('actor.id = :actorId', { actorId: user.id });
 
   if (Array.isArray(entity)) {
     const _user = entity[0];
-    const file = entity[1]
+    const file = entity[1];
     const objectType = file.constructor.name;
     log = log
       .andWhere('log.objectType = :objectType', { objectType })
-      .andWhere('file.id = :fileId', { fileId: file.id})
-      .andWhere('user.id = :userId', { userId: _user.id})
+      .andWhere('file.id = :fileId', { fileId: file.id })
+      .andWhere('user.id = :userId', { userId: _user.id });
   } else {
     const objectType = entity.constructor.name;
     log = log
       .andWhere('log.objectType = :objectType', { objectType })
-      .andWhere('file.id = :fileId', { fileId: entity.id})
+      .andWhere('file.id = :fileId', { fileId: entity.id });
   }
-    log = await log.limit(1).getMany();
+  log = await log.limit(1).getMany();
 
   return !!log.length;
 };
-
 
 class BehaviourLogger {
   parseUsersFromFile(log, file) {
     let fileUsers = [];
     if (file.contributors) {
-      fileUsers = fileUsers.concat(file.contributors.filter((contrib) => {
-        return contrib.user.id !== log.actor.id
-      }).map((contrib) => contrib.user));
+      fileUsers = fileUsers.concat(
+        file.contributors
+          .filter(contrib => {
+            return contrib.user.id !== log.actor.id;
+          })
+          .map(contrib => contrib.user),
+      );
     }
     if (log.actor.id !== file.user.id) {
       fileUsers.push(file.user);
@@ -76,9 +79,9 @@ class BehaviourLogger {
     } else if (log.objectType === 'Contributor') {
       log.affectedUsers.push(entity.user);
     } else if (log.objectType === 'Star') {
-      log.affectedUsers = this.parseUsersFromFile(log, entity.file)
+      log.affectedUsers = this.parseUsersFromFile(log, entity.file);
     } else if (log.objectType === 'UserInviteCode') {
-      log.affectedUsers.push()
+      log.affectedUsers.push();
     }
 
     return log;
@@ -132,8 +135,8 @@ class BehaviourLogger {
 }
 
 module.exports = {
-  devLog: dev,
-  commonLog: common,
+  // devLog: dev,
+  // commonLog: common,
   BehaviourLogger,
-  logExistCheck
+  logExistCheck,
 };

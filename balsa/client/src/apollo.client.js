@@ -2,7 +2,6 @@ import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloLink } from 'apollo-link';
 import DebounceLink from 'apollo-link-debounce';
-import process from 'process';
 import { createUploadLink } from 'apollo-upload-client';
 
 const DEFAULT_DEBOUNCE_TIMEOUT = 400;
@@ -20,12 +19,17 @@ const authMiddleware = new ApolloLink((operation, forward) => {
 
 const cache = new InMemoryCache();
 
+const hostname = window.location.hostname;
+const protocol = window.location.protocol;
+const port = process.env.VUE_APP_SERVER_PORT;
+const serverUrl = `${protocol}//${hostname}${port === '80' || port === 80 ? '' : ':' + port}`;
+
 const apolloClient = new ApolloClient({
   link: ApolloLink.from([
     authMiddleware,
     debounceLink,
     createUploadLink({
-      uri: process.env.NODE_ENV === 'production' ? 'http://describe.im:3000/graphql' : 'http://localhost:3000/graphql',
+      uri: `${serverUrl}/graphql`,
     }),
   ]),
   cache,

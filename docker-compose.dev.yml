@@ -29,9 +29,11 @@ services:
       - DB_USERNAME=balsa
       - DB_PASSWORD=balsa
       - DB_DATABASE_NAME=balsa
+    env_file:
+      - .env
 
     container_name: balsa
-    command: bash -c "yarn && yarn dev"
+    command: bash -c "yarn && yarn create-root-user && yarn dev"
     ports:
       - 3000:3000
       - 3001:3001

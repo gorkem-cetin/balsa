@@ -1,5 +1,5 @@
 import { gql } from 'apollo-server-express';
-import { BUILD_DATE } from '../../constants';
+import { VERSION } from '../../constants';
 import {Configurations} from "../../entities/configurations";
 import {UserConfigurations} from "../../entities/userConfigurations";
 
@@ -22,6 +22,7 @@ const typeDefs = gql`
   type Configuration {
     id: Int
     copyLink: Boolean
+    appInitialized: Boolean
   }
   
   input UserConfigurationInput {
@@ -43,7 +44,7 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     version: async () => {
-      return BUILD_DATE;
+      return VERSION;
     },
     configurations: async () => {
       return await Configurations.findOne({ id: 1 })

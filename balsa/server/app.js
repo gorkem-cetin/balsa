@@ -6,10 +6,10 @@ import cors from 'cors';
 import passport from 'passport';
 import { createConnection } from 'typeorm';
 
-import {devLog, commonLog} from './logging/core';
+// import {devLog, commonLog} from './logging/core';
 import jwtStrategy from './middleware/auth';
 import { apolloServer } from './graphql';
-import {Configurations} from "./entities/configurations";
+import { Configurations } from './entities/configurations';
 
 dotenv.config();
 createConnection()
@@ -19,14 +19,14 @@ createConnection()
     const PORT = process.env.SERVER_PORT || 3000;
 
     // Logging
-    app.use(devLog);
-    app.use(commonLog);
+    // app.use(devLog);
+    // app.use(commonLog);
     app.use(bodyParser.json(), cors());
 
     let config = await Configurations.findOne();
     if (!config) {
       config = new Configurations();
-      await config.save()
+      await config.save();
     }
 
     passport.use('jwt', jwtStrategy);

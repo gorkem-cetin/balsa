@@ -2,6 +2,19 @@
 const DartSass = require('dart-sass');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const SvgStore = require('webpack-svgstore-plugin');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const process = require('process');
+
+const MODE = process.env.NODE_ENV;
+const SERVER_DOMAIN = process.env.SERVER_DOMAIN;
+const SERVER_PORT = process.env.SERVER_PORT;
+const IS_SECURE = process.env.SSL;
+const HTML_SCHEMA = IS_SECURE ? 'https' : 'http';
+const SERVER_URL = `${HTML_SCHEMA}://${SERVER_DOMAIN}${SERVER_PORT === 80 ? '' : ':' + SERVER_PORT}`;
+
+process.env.VUE_APP_MODE = MODE;
+process.env.VUE_APP_SERVER_URL = SERVER_URL;
+process.env.VUE_APP_IS_SECURE = IS_SECURE;
 
 module.exports = {
   runtimeCompiler: true,

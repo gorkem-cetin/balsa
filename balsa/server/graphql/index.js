@@ -7,7 +7,7 @@ import { typeDefs as FolderTypes, resolvers as FolderResolvers } from './folder'
 import { typeDefs as ConfigTypes, resolvers as ConfigResolvers } from './config';
 import { typeDefs as LogTypes, resolvers as LogResolvers } from './logging';
 import { typeDefs as UserUploadTypes, resolvers as UserUploadResolvers } from './userUpload';
-import { IS_DEV } from "../constants";
+import { IS_DEV } from '../constants';
 
 const resolvers = {};
 const directives = {};

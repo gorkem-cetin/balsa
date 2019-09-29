@@ -14,6 +14,7 @@ import { BalsaFile } from '../../entities/balsaFile';
 import {UserInviteCode} from "../../entities/userInviteCode";
 import {BehaviourLog} from "../../entities/behaviourLog";
 import {BehaviourLogger} from "../../logging/core";
+import {Configurations} from "../../entities/configurations";
 
 const logger = new BehaviourLogger();
 
@@ -177,8 +178,14 @@ const resolvers = {
       newUser.lastName = lastName;
       if (inviteCode) {
         newUser.role = inviteCode.role;
+      } else {
+        newUser.role = User.ROLE_ADMIN;
       }
       await newUser.save();
+
+      const configuration = await Configurations.findOne({ id: 1 });
+      configuration.appInitialized = true;
+      await configuration.save()
 
       logger.log(newUser, newUser, BehaviourLog.ACTION_REGISTER_USER);
 
